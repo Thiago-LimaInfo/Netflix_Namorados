@@ -50,35 +50,57 @@ body{
     padding-top: 440px;
     height: 190px;
 }
-.banner__description{
-    width: 550px;
-    line-height: 1.1;
-    padding-top: 60px;
-    font-size: 1.5rem;
-    max-width: 840px;
-    height: 180px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: center 50px 50px;
-    border-radius: 50px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 600);
-    display: flex;
-    justify-content: center;
-    text-align: center;
+
+.banner__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 15px; /* espaço entre os botões */
+  flex-wrap: wrap;    
 }
+
 .banner__button{
-    background-color: #e50914;
-    color: white;
-    border: solid;
-    padding-top: 60px;
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+
+    appearance: none;
+
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(0, 0, 0);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+
+
+    /* border: 0px solid; */
+    /* border-radius: 4px; */
+
     padding: center 50px 50px;
-    font-size: 2rem;
-    border-radius: 50px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -87,6 +109,38 @@ body{
     background-color: #e6e6e6;
     transition: all 0.2s;
 }
+
+/* POPUP */
+.popup {
+  display: none; /* oculto por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+    background-color: rgb(51, 51, 51);
+    /* background: white; */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    position: relative;
+}
+
+.popup__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 .banner--fadeBottom {
     margin-top: 435px;
     height: 7.8rem;
